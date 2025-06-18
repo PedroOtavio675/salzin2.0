@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer namorar comigo?</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div id="caixa" class="pedido">
+        <h1>Quer namorar comigo?</h1>
+    <img id="imagem" src="co2.png" alt="">
+   <div class="botoes">
+     <button class="b" id="fugitivo">Não</button>
+     <br>
+    <a href="#aceitou"><button class="b" id="sim">Sim</button></a>
+   </div>
+       
+</div>
+
+
+
+<div class="aceitou" id="aceitou">
+    <h1>Te busco as 20:00?</h1>
+    <img id="aliança" style="width:300px" src="caixa de aliança.png" alt="" />
+    
+    <form action="">
+        <h2>Mande uma menssagem para seu Amor</h2>
+        <div style="flex-direction: column; display: flex; align-items: center; justify-content: center;">
+   <textarea name="" id="mensagem" placeholder="Escreva sua menssagem"></textarea>
+   
+
+   
+
+    <button  onclick="enviarMensagem(event)" type="submit" class="botaoEnviar">Enviar</button>
+    <button id="tocarMusica" class="tocarMusica">Tocar Música</button>
+    <audio id="musica" preload="auto"> 
+    <source src="careless-whisper-official-video.mp3" type="audio/mpeg">
+   </audio>
+    </div>
+    </form >
+</div>
+
+    <script>
+        
+        const button = document.getElementById('fugitivo');
+        document.getElementById("tocarMusica").addEventListener("click", ()=>{
+            const musica = document.getElementById("musica")
+            musica.play()
+        })
+
+        button.addEventListener('mouseover', () => {
+            const randomX = Math.random() * (window.innerWidth - button.offsetWidth);
+            const randomY = Math.random() * (window.innerHeight - button.offsetHeight);
+
+            button.style.left = `${randomX}px`;
+            button.style.top = `${randomY}px`;
+            console.log("ok");
+            
+        });
+
+         function enviarMensagem(event) {
+            event.preventDefault()
+               const mensagem = document.getElementById("mensagem").value
+               if(mensagem !== ''){
+const telefone = '553497390931'
+          const url =  `https://wa.me/${telefone}?text=${mensagem}`
+        window.open(url, '_blank')
+         alert("Mensagem enviada com sucesso!");
+               }else{
+                alert("Por favor me envie uma mensagem!")
+               }
+    
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+     overflow-y: hidden;
+     color: white;
+     text-align: center;
+}
+body{
+   width: 100vw;
+    height: 100vh;
+}
+.pedido{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: brown;
+}
+.b{
+            position: absolute;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background: lightcoral;
+            border: none;
+            border-radius: 10px;
+            color: white;
+}
+.tocarMusica{
+     padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: lightcoral;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin: 10px;
+}
+.botaoEnviar{
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: lightcoral;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin: 10px;
+}
+textarea{
+    width: 250px;
+    height: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: black;
+}
+.aceitou{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+        background: darkred;
+        color: white;
+        overflow: hidden;
+}
+#fugitivo {
+    position: absolute;
+    left: 54%;
+    /* top: 564px; */
+
+}
+#caixa{
+    position: relative;
+}
+.botoes{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Tamanho original */
+    }
+    50% {
+        transform: scale(0.8); /* Aumenta 20% */
+    }
+    100% {
+        transform: scale(1); /* Volta ao tamanho original */
+    }
+}
+img{
+    animation: pulse 2s infinite;
+}
