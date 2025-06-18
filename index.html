@@ -45,7 +45,8 @@
     <script>
         
         const button = document.getElementById('fugitivo');
-        document.getElementById("tocarMusica").addEventListener("click", ()=>{
+        document.getElementById("tocarMusica").addEventListener("click", (event)=>{
+            event.preventDefault()
             const musica = document.getElementById("musica")
             musica.play()
         })
